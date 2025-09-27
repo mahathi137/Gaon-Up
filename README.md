@@ -33,9 +33,8 @@ npm install
 ```bash
 npm run dev
 ```
-open your browser at
-http://localhost:5173 to view the app.
 
 ## License
 
 This project is licensed under the *MIT License*. See the LICENSE file for details.
+
