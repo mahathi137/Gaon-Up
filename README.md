@@ -19,10 +19,11 @@ Watch the demo here: [Gaon-Up Demo](https://drive.google.com/file/d/1QZiapJidpi6
 
 ## Installation
 
-1. *Clone the Repository*
-'''bash
+### 1. Clone the repository
+```bash
 git clone https://github.com/your-username/gaon-up.git
 cd gaon-up
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
