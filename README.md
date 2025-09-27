@@ -6,12 +6,12 @@ The platform simulates real-world challenges like limited resources and infrastr
 
 ## Features
 
-- *Interactive Village Planning*: Drag and drop resources like toilets, street lights, roads, and trees.  
-- *Budget Management*: Track spending and optimize resource allocation.  
-- *Mini Games*: Test your planning efficiency under time constraints.  
-- *Knowledge Quiz*: Evaluate understanding of village development strategies.  
-- *XP & Scoring System*: Earn points based on planning efficiency and quiz results.  
-- *AI Chatbot Assistance*: "Maya" provides guidance and tips during gameplay.
+- **Interactive Village Planning**: Drag and drop resources like toilets, street lights, roads, and trees.  
+- **Budget Management**: Track spending and optimize resource allocation.  
+- **Mini Games**: Test your planning efficiency under time constraints.  
+- **Knowledge Quiz**: Evaluate understanding of village development strategies.  
+- **XP & Scoring System**: Earn points based on planning efficiency and quiz results.  
+- **AI Chatbot Assistance**: "Maya" provides guidance and tips during gameplay.
 
 ## Demo Video
 
@@ -23,7 +23,7 @@ Watch the demo here: [Gaon-Up Demo](https://drive.google.com/file/d/1QZiapJidpi6
 ```bash
 git clone https://github.com/your-username/gaon-up.git
 cd gaon-up
-
-## License
+```
+### License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
