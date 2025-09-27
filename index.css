@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+@layer base {
+  :root {
+    --background: 39 76% 97%; /* #FAEBD7 - Antique white */
+    --foreground: 15 28% 19%;  /* #3E2723 - Dark brown */
+    
+    --card: 60 100% 97%; /* #F5F5DC - Beige */
+    --card-foreground: 15 28% 19%; /* #3E2723 - Dark brown */
+    
+    --popover: 60 100% 97%; /* #F5F5DC - Beige */
+    --popover-foreground: 15 28% 19%; /* #3E2723 - Dark brown */
+    
+    --primary: 25 78% 31%; /* #8B4513 - Saddle brown */
+    --primary-foreground: 0 0% 100%; /* White */
+    
+    --secondary: 120 30% 34%; /* #556B2F - Darker olive green */
+    --secondary-foreground: 0 0% 100%; /* White */
+    
+    --muted: 60 56% 91%; /* #F5F5DC with less saturation */
+    --muted-foreground: 15 28% 40%; /* Lighter version of dark brown */
+    
+    --accent: 33 85% 45%; /* #D2691E - Chocolate */
+    --accent-foreground: 0 0% 100%; /* White */
+    
+    --destructive: 0 65% 45%; /* #B22222 - Firebrick (darker red) */
+    --destructive-foreground: 0 0% 100%; /* White */
+    
+    --border: 25 76% 28%; /* Darker saddle brown */
+    --input: 25 60% 20%; /* Even darker saddle brown */
+    --ring: 33 85% 45%; /* Chocolate */
+    
+    --radius: 0.75rem;
+    
+    /* Chart colors */
+    --chart-1: 120 30% 34%; /* #556B2F - Darker olive green */
+    --chart-2: 33 85% 45%; /* #D2691E - Chocolate */
+    --chart-3: 25 78% 31%; /* #8B4513 - Saddle brown */
+    --chart-4: 16 75% 55%; /* #CD853F - Peru (sandy brown) */
+    --chart-5: 36 50% 45%; /* #A0522D - Sienna (reddish-brown) */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kalam', cursive;
+  }
+}
+
+.animated-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.animated-element.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.ripple:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+}
+
+.ripple:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
+
+.village-pattern {
+  background-image: url('https://images.unsplash.com/photo-1531968455001-5c5272a41129?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.village-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(139, 69, 19, 0.15);
+  z-index: 1;
+}
+
+.village-pattern > * {
+  position: relative;
+  z-index: 2;
+}
+
+.map-placeholder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  border-radius: 0.5rem;
+}
+
+/* Custom animations for the village development game */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shine {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.animate-shine {
+  background: linear-gradient(
+    90deg,
+    transparent, 
+    rgba(255, 255, 255, 0.2), 
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shine 2s infinite;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.animate-spin {
+  animation: spin 1.5s linear infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1s ease-in-out infinite;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.5s forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.5s forwards;
+}
+
+/* Village viewer animations */
+@keyframes panSlow {
+  from { transform: scale(1.05) translate(0, 0); }
+  to { transform: scale(1.05) translate(-5%, -2%); }
+}
+
+@keyframes clouds {
+  from { background-position: 0 0; }
+  to { background-position: 100% 0; }
+}
+
+.animate-pan-slow {
+  animation: panSlow 30s ease-in-out infinite alternate;
+}
+
+.animate-clouds {
+  animation: clouds 60s linear infinite;
+}
+
+/* Add more colorful, engaging styles */
+.gradient-border {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    #8B4513,
+    #A0522D,
+    #CD853F,
+    #D2691E,
+    #A52A2A
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 6s ease infinite;
+  border-radius: 0.75rem;
+}
+
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.glassmorphism {
+  background: rgba(245, 222, 179, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(139, 69, 19, 0.18);
+  box-shadow: 0 4px 30px rgba(139, 69, 19, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    to right,
+    #8B4513,
+    #D2691E,
+    #A0522D
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: text-gradient-animation 6s ease infinite;
+  background-size: 200% auto;
+}
+
+@keyframes text-gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
