@@ -15,15 +15,27 @@ The platform simulates real-world challenges like limited resources and infrastr
 
 ## Demo Video
 
-Watch the demo here: [Gaon-Up Demo](https://drive.google.com/file/d/1QZiapJidpi6uIvApsGVOWsE9LaT1lMZy/view?usp=sharing)  
+Watch the demo here: [Gaon-Up Demo]
+(https://drive.google.com/file/d/1QZiapJidpi6uIvApsGVOWsE9LaT1lMZy/view?usp=sharing)  
 
 ## Installation
 
-### 1. Clone the repository
+1. **Clone the Repository** 
 ```bash
 git clone https://github.com/your-username/gaon-up.git
 cd gaon-up
 ```
-### License
+2. Install dependencies
+```bash
+npm install
+```
+3. Run the app locally
+```bash
+npm run dev
+```
+open your browser at
+http://localhost:5173 to view the app.
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+## License
+
+This project is licensed under the *MIT License*. See the LICENSE file for details.
